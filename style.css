@@ -397,8 +397,7 @@ table {
         color:var(--White);
     }
 
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
-@media screen and (min-width: 620px){
+@media screen and (max-width: 450px){
     header p #hideThis{
         display: inline;
     }
@@ -485,113 +484,95 @@ table {
     }
 
 }
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
-@media screen and (min-width: 950px){
-    nav h3{
-        display: none;
-    }
-    nav{
-        display: flex;
-    }
-    nav ul{
-        display: flex;
-    }
-    nav:hover ul{
-        display: flex;
-        flex-direction: row;
-    }
-    nav:hover ul li a{
-        margin:0px;
-        padding:10px;
-    }
-    nav ul li{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    #services{
-        grid-template-columns: auto auto auto auto ;
-        grid-template-rows: auto auto;
-        align-items:first baseline;
-        margin: 25px;
-    }
-    #services h2{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start:1;
-        grid-row-end: 1;
-        margin-left: 0;
-    }
-    #services .serviceItem{
-        padding:20px;
-        margin: 10px 10px 10px 10px;
+@media screen and (max-width: 450px) {
 
+    html {
+        background-color: var(--Purple);
     }
-    #services #oneOnOne{
-        grid-column-start: 1;
-        grid-row-start: 2;
-        display: flex;
-        flex-direction: column;
-        padding:0;
-        margin:0;
-    }
-    #services #groupCoaching{
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 2;
-        display: flex;
-        flex-direction: column;
-    }
-    #services #workshops{
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        display: flex;
-        flex-direction: column;
-    }
-    #services #onlineCourses{
-        grid-column-start: 4;
-        grid-row-start: 2;
-        display: flex;
-        flex-direction: column;
 
+    h1, h2 {
+        font-family: "Kavoon";
     }
-    #pricing{
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto;
-        column-gap: 40px;
-        align-items:baseline;
- 
-        
-    }
-    #pricing h2{
 
-        grid-column-start: 1;
-        grid-row-start: 1;
-    }
-    #pricing #privateCoachingPrice{
-        grid-column-start: 1;
-        grid-row-start: 2;
-    }
-    #pricing #groupCoachingPrice{
-        grid-column-start: 2;
-        grid-row-start: 2;
-    }
-    #pricing #workshopPrice{
-        grid-column-start: 3;
-        grid-row-start: 2;
-    }
-    #pricing #onlinePrice{
-        grid-column-start: 4;
-        grid-row-start: 2;
-    }
-}
-/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-@media screen and (min-width:1280px){
-    body{
-        margin-left: 10%;
-        margin-right: 10%;
+    h1 { font-size: 3em; }
+    nav h2 { font-size: 1.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.5em; }
+    h4 { font-size: 1.15em; }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        color: var(--White);
+    }
+
+    header h1 {
+        padding: 50px 0 20px 0;
+        background-color: var(--Lavender);
+        border-radius: 0 0 25px 25px;
+    }
+
+    header p {
+        background-color: var(--Pink);
+        padding: 20px 0 5px 0;
+        border-radius: 0 0 25px 25px;
+        margin: 0 10px;
+        z-index: -1;
+        position: relative;
+        top: -5px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    header p #hideThis {
+        display: inline;
+    }
+
+    nav {
+        background-color: var(--Yellow);
+        display: block;
+        text-align: center;
+        padding: 15px;
+        border-radius: 0 0 15px 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    nav h2 {
+        display: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    nav:hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav:hover ul li a {
+        font-weight: bold;
+        display: block;
+        background-color: var(--White);
+        margin: 10px;
+        padding: 10px 5px;
+        border-radius: 5px;
+    }
+
+    nav:hover ul li a:hover {
+        background-color: #ffeec9;
+        border-radius: 8px;
+    }
+
+    nav ul {
+        display: none;
     }
 }
